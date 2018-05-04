@@ -1,4 +1,4 @@
-### Key word
+### queue
 **FIFO**
 
 ![queue](../images/Collection.png)  
@@ -58,3 +58,12 @@
     当然，在多线程程序中，队列在任何时间都可能变成满的或空的，所以你可能想使用offer、poll、peek方法。
     这些方法在无法完成任务时,只是给出一个return false 而不会抛出异常。  
     阻塞操作put和take。put方法在队列满时阻塞，take方法在队列空时阻塞。
+    
+
+### LinkedList ConcurrentLinkedQueue LinkedBlockingQueue  
+
+| name | 描述 | note |
+|:---|:---|:---|
+|LinkedList| 链表结构，无并发控制||
+|LinkedBlockingQueue|锁机制(底层获取锁也是使用的CAS算法) |支持阻塞的take() |
+|ConcurrentLinkedQueue|CAS算法|不支持阻塞,插入元素快|
